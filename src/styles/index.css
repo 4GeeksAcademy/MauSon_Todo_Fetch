@@ -1,12 +1,110 @@
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+body{
+    margin-top:20px;
+    background: #f8f8f8;
+}
 
-*/
+.todo-list {
+    margin: 10px 0
+}
+
+.todo-list .todo-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 0;
+    background: #f7f7f7
+}
+
+
+.todo-item:hover .remove-todo-item {
+    visibility: visible
+}
+
+
+.card {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: initial;
+    background: #fff;
+    border-radius: calc(.15rem - 1px);
+    box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
+}
+
+/* Ocultar el ícono por defecto */
+.todo-item .delete-icon {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Mostrar el ícono cuando el mouse pasa sobre la fila */
+  .todo-item:hover .delete-icon {
+    opacity: 1;
+  }
+
+  /* Estilo para tareas completadas */
+.text-completed {
+    text-decoration: line-through; /* Aplica el tachado */
+    color: gray; /* Cambia el color del texto a gris */
+  }
+  
+  .circle-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.2rem; /* Tamaño del icono */
+    cursor: pointer;
+    border: 1px solid #ccc; /* Borde gris */
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white; /* Fondo blanco */
+    color: #6c757d; /* Gris oscuro para los iconos */
+  }
+  
+  .circle-button:hover {
+    background-color: #f8f9fa; /* Gris claro al hacer hover */
+    color: #495057; /* Gris más oscuro al hacer hover */
+  }
+
+  /* Estilos específicos para el botón rojo */
+.circle-button-red {
+    background-color: #ff0000;      /* Color rojo */
+    color:#fffdfd;
+  
+  }
+  
+  .circle-button-red:hover {
+    background-color: #972300;      /* rojo más oscuro al hacer hover */
+    color:#fffdfdcb;
+  }
+
+  /* Estilos para el ícono de eliminar */
+.delete-icon-task {
+    color: red; /* Color del ícono */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar el mouse */
+    transition: color 0.2s ease; /* Animación suave para el color */
+}
+
+.delete-icon-task:hover {
+    color: darkred; /* Cambia el color al pasar el mouse */
+}
+
+.clear-all-container {
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+.todo-item {
+    cursor: pointer; /* Indica que es clickeable */
+    transition: background-color 0.2s ease; /* Efecto suave */
+}
+
+.todo-item:hover {
+    background-color: #f1f1f1; /* Fondo gris claro al pasar el mouse */
+}
